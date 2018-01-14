@@ -1,8 +1,10 @@
 package com.springinaction.spitter.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "spittle")
@@ -12,7 +14,9 @@ public class Spittle implements Serializable {
     private Long id;
     private Spitter spitter;
     private String text;
-    private Date when;
+
+    @DateTimeFormat(pattern="yyyy/MM/dd")
+    private LocalDate when;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -44,11 +48,11 @@ public class Spittle implements Serializable {
     }
 
     @Column(name = "posted_time")
-    public Date getWhen() {
+    public LocalDate getWhen() {
         return when;
     }
 
-    public void setWhen(Date when) {
+    public void setWhen(LocalDate when) {
         this.when = when;
     }
 }
