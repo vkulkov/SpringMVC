@@ -3,11 +3,11 @@ package com.springinaction.spitter.service;
 import com.springinaction.spitter.domain.Spitter;
 import com.springinaction.spitter.domain.Spittle;
 import com.springinaction.spitter.persistence.SpitterDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.inject.Inject;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
 public class SpitterServiceImpl implements SpitterService {
     private final SpitterDAO spitterDAO;
 
-    @Autowired
+    @Inject
     public SpitterServiceImpl(SpitterDAO spitterDAO) {
         this.spitterDAO = spitterDAO;
     }
