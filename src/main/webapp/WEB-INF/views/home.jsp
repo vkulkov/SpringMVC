@@ -27,8 +27,7 @@
                     <a href="${spitter_url}">
                         <c:out value="${spittle.spitter.username}"/>
                     </a>
-                    - <c:out value="${spittle.text}"/>
-                    <br/>
+                    - <c:out value="${spittle.text}"/><br/>
                     <small>
                         <fmt:formatDate value="${spittle.when}" pattern="yyyy/MM/dd"/>
                     </small>
