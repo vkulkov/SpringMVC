@@ -3,7 +3,7 @@
 <div>
     <h2>Create a free Spitter account</h2>
 
-    <sf:form method="post" modelAttribute="spitter">
+    <sf:form method="post" modelAttribute="spitter" enctype="multipart/form-data">
         <fieldset>
             <table cellspacing="0">
                 <tr>
@@ -43,6 +43,10 @@
                         <sf:checkbox path="updateByEmail" id="user_send_email_newsletter"/>
                         <label for="user_send_email_newsletter">Send me email updates!</label>
                     </td>
+                </tr>
+                <tr>
+                    <th><label for="image">Profile image:</label></th>
+                    <td><input name="image" type="file"/></td>
                 </tr>
                 <tr>
                     <th></th>
