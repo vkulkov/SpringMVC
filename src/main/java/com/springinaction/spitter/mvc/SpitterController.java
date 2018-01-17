@@ -28,4 +28,10 @@ public class SpitterController {
         model.addAttribute(spitterService.getSpittlesForSpitter(username));
         return "spittles/list";
     }
+
+    @RequestMapping(method = GET, params = "new")
+    public String createSpitterProfile(Model model) {
+        model.addAttribute(new Spitter());
+        return "spitters/edit";
+    }
 }
