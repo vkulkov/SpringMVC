@@ -1,6 +1,8 @@
 package com.springinaction.spitter.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
@@ -10,12 +12,17 @@ public class Spitter implements Serializable {
 
     private Long id;
 
+    @Size(min = 3, max = 20, message = "Username must must be between 3 and 20 characters long.")
+    @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "Username must be alphanumeric with no spaces.")
     private String username;
 
+    @Size(min = 6, max = 30, message = "Password must be at least 6 characters long.")
     private String password;
 
+    @Size(min = 3, max = 50, message = "Your full name must be between 3 and 50 characters long.")
     private String fullName;
 
+    @Pattern(regexp = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}", message = "Invalid email address.")
     private String email;
 
     private boolean updateByEmail;

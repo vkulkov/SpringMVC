@@ -6,4 +6,8 @@
     <definition name="spitters/edit" extends="template">
         <put-attribute name="content" value="/WEB-INF/views/spitters/edit.jsp"/>
     </definition>
+
+    <definition name="spitters/view" extends="template">
+        <put-attribute name="content" value="/WEB-INF/views/spitters/view.jsp"/>
+    </definition>
 </tiles-definitions>
