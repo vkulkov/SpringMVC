@@ -11,4 +11,12 @@
     <definition name="home" extends="template">
         <put-attribute name="content" value="/WEB-INF/views/home.jsp"/>
     </definition>
+
+    <definition name="login" extends="template">
+        <put-attribute name="content" value="/WEB-INF/views/login.jsp"/>
+    </definition>
+
+    <definition name="admin" extends="template">
+        <put-attribute name="content" value="/WEB-INF/views/admin.jsp"/>
+    </definition>
 </tiles-definitions>
